@@ -12,9 +12,13 @@ public class NextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_next);
+        //obtem o intent que criou essa tela
         Intent i = getIntent();
+        //obtem o texto que veio junto com o intent
         String texto = i.getStringExtra("texto");
+        //obtem o elemento de interface do textview
         TextView tvTexto = findViewById(R.id.tvTexto);
+        //ceta o texto dentro do textview
         tvTexto.setText(texto);
     }
 }
